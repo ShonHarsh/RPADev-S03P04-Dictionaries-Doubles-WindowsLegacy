@@ -4,7 +4,7 @@
 
 This project is my solution in **C#** to the **Dictionaries & Doubles** practice found in section 03 practice 04 of the UiPath - RPA Developer Foundation course.
 
-### NOTE: This project is still in development.  The nested dictionaries are proving to be difficult.
+### NOTE: This project is still in development.  The nested dictionaries are proving to be difficult.  I am delaying finishing this project until later in the training course.
 
 ### Getting Started
 
