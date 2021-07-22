@@ -4,8 +4,6 @@
 
 This project is my solution in **C#** to the **Dictionaries & Doubles** practice found in section 03 practice 04 of the UiPath - RPA Developer Foundation course.
 
-### NOTE: This project is still in development.
-
 ### Getting Started
 
 After making a pull request or downloading the project, open the Main.xaml in UiPath Studio.  The robot can be run with the play button in the ribbon and the result can be seen in output pane.
