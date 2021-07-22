@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1393,3117" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1322,4362" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -68,11 +68,11 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Specification:&#xA;Calculate the combined weight of the packages sent to one city&#xA;&#xA;Consider the database of a shipping company containing people and the packages they are sending to certain cities across the world, along with their weight. The database is a Dictionary with the key of String type (the names of the persons) and the values of Dictionary (String/Cities, Double/Weight) type.&#xA;&#xA;Please calculate the overall weight for one city destination. Once this is done, the user should be presented with an input dialog containing the distinct list of cities present in the input data dictionary. If the user chooses no value from the input dialog, print &quot;Nothing chosen by the user&quot;; otherwise you can print &quot;The combined weight of the packages sent to &lt;ChosenCity&gt; is x.xx&quot; (use double digits)." DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="931,2952" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Specification:&#xA;Calculate the combined weight of the packages sent to one city&#xA;&#xA;Consider the database of a shipping company containing people and the packages they are sending to certain cities across the world, along with their weight. The database is a Dictionary with the key of String type (the names of the persons) and the values of Dictionary (String/Cities, Double/Weight) type.&#xA;&#xA;Please calculate the overall weight for one city destination. Once this is done, the user should be presented with an input dialog containing the distinct list of cities present in the input data dictionary. If the user chooses no value from the input dialog, print &quot;Nothing chosen by the user&quot;; otherwise you can print &quot;The combined weight of the packages sent to &lt;ChosenCity&gt; is x.xx&quot; (use double digits)." DisplayName="Sequence Main" sap:VirtualizedContainerService.HintSize="931,4197" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, scg:Dictionary(x:String, x:Double))" Name="database" />
     </Sequence.Variables>
@@ -136,16 +136,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </Assign>
-    <TryCatch DisplayName="Try Catch Main" sap:VirtualizedContainerService.HintSize="889,2402" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch Main" sap:VirtualizedContainerService.HintSize="889,3647" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Variables>
-        <Variable x:TypeArguments="x:String" Name="dataName" />
-        <Variable x:TypeArguments="scg:List(x:String)" Name="listNames">
-          <Variable.Default>
-            <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">new List&lt;string&gt;{};</mca:CSharpValue>
-          </Variable.Default>
-        </Variable>
-        <Variable x:TypeArguments="x:Double" Name="weight" />
-        <Variable x:TypeArguments="x:String" Name="city" />
         <Variable x:TypeArguments="scg:Dictionary(x:String, x:Double)" Name="cityWeightTotal">
           <Variable.Default>
             <mca:CSharpValue x:TypeArguments="scg:Dictionary(x:String, x:Double)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_225">new Dictionary&lt;string, double&gt;()</mca:CSharpValue>
@@ -159,7 +151,15 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence DisplayName="Sequence TryCatch Main" sap:VirtualizedContainerService.HintSize="851,2175" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Sequence TryCatch Main" sap:VirtualizedContainerService.HintSize="851,2911" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="dataName" />
+            <Variable x:TypeArguments="scg:List(x:String)" Name="listNames">
+              <Variable.Default>
+                <mca:CSharpValue x:TypeArguments="scg:List(x:String)" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">new List&lt;string&gt;{};</mca:CSharpValue>
+              </Variable.Default>
+            </Variable>
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -183,7 +183,7 @@
                   <Assign sap2010:Annotation.AnnotationText="This dataName will be each name, duplicates not considered" DisplayName="Assign Key" sap:VirtualizedContainerService.HintSize="262,102" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">
-                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">dataName</mca:CSharpReference>
+                        <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">dataName</mca:CSharpReference>
                       </OutArgument>
                     </Assign.To>
                     <Assign.Value>
@@ -197,7 +197,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <AddToCollection x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Add the name to a list.  This will be used to iterate throught the disctionary values." DisplayName="Add To Collection Name" sap:VirtualizedContainerService.HintSize="262,94" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3">
+                  <AddToCollection x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Add the name to a list.  This will be used to iterate throught the dictionary values." DisplayName="Add To Collection Name" sap:VirtualizedContainerService.HintSize="262,94" sap2010:WorkflowViewState.IdRef="AddToCollection`1_3">
                     <AddToCollection.Item>
                       <InArgument x:TypeArguments="x:String">
                         <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_106">dataName</mca:CSharpValue>
@@ -228,38 +228,39 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEach>
-          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterates over the names in the list." DisplayName="For Each ListNames" sap:VirtualizedContainerService.HintSize="809,1212" sap2010:WorkflowViewState.IdRef="ForEach`1_16">
+          <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Iterates over the names in the list." DisplayName="For Each ListNames" sap:VirtualizedContainerService.HintSize="809,1112" sap2010:WorkflowViewState.IdRef="ForEach`1_16">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:String">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:String" Name="item" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body CityWeight" sap:VirtualizedContainerService.HintSize="773,1047" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                <Sequence DisplayName="Body ListNames" sap:VirtualizedContainerService.HintSize="773,947" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="city" />
+                    <Variable x:TypeArguments="x:Double" Name="weight" />
+                  </Sequence.Variables>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" CurrentIndex="{x:Null}" DisplayName="For Each CityWeight" sap:VirtualizedContainerService.HintSize="731,955" sap2010:WorkflowViewState.IdRef="ForEach`1_26">
+                  <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" CurrentIndex="{x:Null}" DisplayName="For Each CityWeight" sap:VirtualizedContainerService.HintSize="731,855" sap2010:WorkflowViewState.IdRef="ForEach`1_26">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:Double)">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" Name="itemCityWeight" />
                         </ActivityAction.Argument>
-                        <Sequence sap2010:Annotation.AnnotationText="itemCityWeight.Key.ToString()  &amp;&#xD;&#xA;itemCityWeight.Value.ToString() can be used to get the elements in the dictionary in the dictionary.&#xD;&#xA;Next, store the totals per city." DisplayName="Body CityWeight" sap:VirtualizedContainerService.HintSize="695,821" sap2010:WorkflowViewState.IdRef="Sequence_22">
-                          <Sequence.Variables>
-                            <Variable x:TypeArguments="x:Double" Name="weightTemp" />
-                          </Sequence.Variables>
+                        <Sequence sap2010:Annotation.AnnotationText="itemCityWeight.Key.ToString()  &amp;&#xA;itemCityWeight.Value.ToString() can be used to get the elements in the dictionary in the dictionary.&#xA;Next, store the totals per city." DisplayName="Body CityWeight" sap:VirtualizedContainerService.HintSize="695,721" sap2010:WorkflowViewState.IdRef="Sequence_22">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap2010:Annotation.AnnotationText="These variable are purely for convenience." sap:VirtualizedContainerService.HintSize="653,91" sap2010:WorkflowViewState.IdRef="Assign_10">
+                          <Assign sap2010:Annotation.AnnotationText="These variable are purely for convenience." DisplayName="Assign City" sap:VirtualizedContainerService.HintSize="653,91" sap2010:WorkflowViewState.IdRef="Assign_10">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">
-                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">city</mca:CSharpReference>
+                                <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">city</mca:CSharpReference>
                               </OutArgument>
                             </Assign.To>
                             <Assign.Value>
@@ -273,10 +274,10 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </Assign>
-                          <Assign sap:VirtualizedContainerService.HintSize="653,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+                          <Assign DisplayName="Assign Weight" sap:VirtualizedContainerService.HintSize="653,60" sap2010:WorkflowViewState.IdRef="Assign_11">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:Double">
-                                <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">weight</mca:CSharpReference>
+                                <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">weight</mca:CSharpReference>
                               </OutArgument>
                             </Assign.To>
                             <Assign.Value>
@@ -285,7 +286,7 @@
                               </InArgument>
                             </Assign.Value>
                           </Assign>
-                          <If sap2010:Annotation.AnnotationText="cityWeightTotal is the 'target' dictionary.  This check is to see if an element with the city exists." DisplayName="If City Exists" sap:VirtualizedContainerService.HintSize="653,441" sap2010:WorkflowViewState.IdRef="If_1">
+                          <If sap2010:Annotation.AnnotationText="cityWeightTotal is the 'target' print dictionary.  This check is to see if an element with the city exists." DisplayName="If City Exists" sap:VirtualizedContainerService.HintSize="653,341" sap2010:WorkflowViewState.IdRef="If_1">
                             <If.Condition>
                               <InArgument x:TypeArguments="x:Boolean">
                                 <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_218">cityWeightTotal.ContainsKey(city)</mca:CSharpValue>
@@ -297,24 +298,12 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence DisplayName="Sequence CityExists" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                              <Sequence DisplayName="Sequence City Exists" sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
-                                  <Assign.To>
-                                    <OutArgument x:TypeArguments="x:Double">
-                                      <mca:CSharpReference x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpReference`1_21">weightTemp</mca:CSharpReference>
-                                    </OutArgument>
-                                  </Assign.To>
-                                  <Assign.Value>
-                                    <InArgument x:TypeArguments="x:Double">
-                                      <mca:CSharpValue x:TypeArguments="x:Double" sap2010:WorkflowViewState.IdRef="CSharpValue`1_219">cityWeightTotal[city]</mca:CSharpValue>
-                                    </InArgument>
-                                  </Assign.Value>
-                                </Assign>
                                 <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:Double">
@@ -374,32 +363,99 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEach>
-          <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="809,287" sap2010:WorkflowViewState.IdRef="ForEach`1_29">
-            <ui:ForEach.Body>
-              <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:Double)">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" Name="item" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="272,153" sap2010:WorkflowViewState.IdRef="Sequence_35">
+          <Sequence DisplayName="Sequence Input Dialog" sap:VirtualizedContainerService.HintSize="809,1123" sap2010:WorkflowViewState.IdRef="Sequence_37">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:InputDialog OptionsString="{x:Null}" DisplayName="Input Dialog Prompt" sap:VirtualizedContainerService.HintSize="625,291" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Title="City Select">
+              <ui:InputDialog.Label>
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_263">"Select the city to get the combined weight." + Environment.NewLine + "Leave selector blank to print all items."</mca:CSharpValue>
+                </InArgument>
+              </ui:InputDialog.Label>
+              <ui:InputDialog.Options>
+                <InArgument x:TypeArguments="s:String[]">
+                  <mca:CSharpValue x:TypeArguments="s:String[]" sap2010:WorkflowViewState.IdRef="CSharpValue`1_251">cityWeightTotal.Keys.ToArray()</mca:CSharpValue>
+                </InArgument>
+              </ui:InputDialog.Options>
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">
+                  <mca:CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">dataName</mca:CSharpReference>
+                </OutArgument>
+              </ui:InputDialog.Result>
+            </ui:InputDialog>
+            <If sap2010:Annotation.AnnotationText="The blank option was selected." DisplayName="If No Select Check" sap:VirtualizedContainerService.HintSize="625,700" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <mca:CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_257">dataName == ""</mca:CSharpValue>
+                </InArgument>
+              </If.Condition>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence DisplayName="Sequence No Selection Print All" sap:VirtualizedContainerService.HintSize="350,511" sap2010:WorkflowViewState.IdRef="Sequence_41">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_16">
+                  <WriteLine DisplayName="Write Line No Select" sap:VirtualizedContainerService.HintSize="308,61" sap2010:WorkflowViewState.IdRef="WriteLine_17">
                     <InArgument x:TypeArguments="x:String">
-                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_248">item.Key.ToString() + " " + item.Value.ToString()</mca:CSharpValue>
+                      <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_264">"Nothing chosen by the user." + Environment.NewLine + "Printing all items."</mca:CSharpValue>
                     </InArgument>
                   </WriteLine>
+                  <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Print all of the cities and the weights." DisplayName="For Each Print All Values" sap:VirtualizedContainerService.HintSize="308,318" sap2010:WorkflowViewState.IdRef="ForEach`1_29">
+                    <ui:ForEach.Body>
+                      <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, x:Double)">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, x:Double)" Name="item" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Body Print All" sap:VirtualizedContainerService.HintSize="272,153" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_16">
+                            <InArgument x:TypeArguments="x:String">
+                              <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_248">item.Key.ToString() + " " + item.Value.ToString()</mca:CSharpValue>
+                            </InArgument>
+                          </WriteLine>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ForEach.Body>
+                    <ui:ForEach.Values>
+                      <InArgument x:TypeArguments="sc:IEnumerable">
+                        <mca:CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_245">cityWeightTotal</mca:CSharpValue>
+                      </InArgument>
+                    </ui:ForEach.Values>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ForEach>
                 </Sequence>
-              </ActivityAction>
-            </ui:ForEach.Body>
-            <ui:ForEach.Values>
-              <InArgument x:TypeArguments="sc:IEnumerable">
-                <mca:CSharpValue x:TypeArguments="sc:IEnumerable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_245">cityWeightTotal</mca:CSharpValue>
-              </InArgument>
-            </ui:ForEach.Values>
-          </ui:ForEach>
+              </If.Then>
+              <If.Else>
+                <WriteLine sap2010:Annotation.AnnotationText="Print the selected city and the weight." DisplayName="Write Line Weight Print" sap:VirtualizedContainerService.HintSize="230,103" sap2010:WorkflowViewState.IdRef="WriteLine_18">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <InArgument x:TypeArguments="x:String">
+                    <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_259" xml:space="preserve">"The combined weight of the packages sent to " + dataName + " is "  + cityWeightTotal[dataName].ToString() + "."</mca:CSharpValue>
+                  </InArgument>
+                </WriteLine>
+              </If.Else>
+            </If>
+          </Sequence>
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
