@@ -20,7 +20,12 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 
 ### Sample Output
 
-//ToDo Complete program and record output
+```
+07/22/2021 10:20:17 => [Debug] Execution started for project: RPADev-S03P04-Dictionaries-Doubles
+07/22/2021 10:20:18 => [Info] RPADev-S03P04-Dictionaries-Doubles execution started
+07/22/2021 10:20:27 => [Debug] The combined weight of the packages sent to Paris is 7.7.
+07/22/2021 10:20:27 => [Info] RPADev-S03P04-Dictionaries-Doubles execution ended in: 00:00:08
+```
 
 ### RPA Developer Foundation Sections
 
