@@ -27,6 +27,14 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 07/22/2021 10:20:27 => [Info] RPADev-S03P04-Dictionaries-Doubles execution ended in: 00:00:08
 ```
 
+### Notes
+
+This image shows the dictionary data types.
+
+The pseudocode is: new Dictionary <String, new Dictionary <String, double>>
+
+![](https://shonharsh.github.io/curriculum-vitae/images/RPADev-S03P04-Dictionaries-Doubles-VariableDataTypes.png)
+
 ### RPA Developer Foundation Sections
 
 1. Get Started With RPA Development
