@@ -29,9 +29,9 @@ After making a pull request or downloading the project, open the Main.xaml in Ui
 
 ### Notes
 
-This image shows the dictionary data types.
+This image shows the dictionary data types.  The pseudocode is:
 
-The pseudocode is: new Dictionary <String, new Dictionary <String, double>>
+new Dictionary <String, new Dictionary <String, Double>>
 
 ![](https://shonharsh.github.io/curriculum-vitae/images/RPADev-S03P04-Dictionaries-Doubles-VariableDataTypes.png)
 
