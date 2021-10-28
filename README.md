@@ -8,6 +8,26 @@ This project is my solution in **C#** to the **Dictionaries & Doubles** practice
 
 After making a pull request or downloading the project, open the Main.xaml in UiPath Studio.  The robot can be run with the play button in the ribbon and the result can be seen in output pane.
 
+#### PRACTICE REQUIREMENTS
+
+###### **Calculate the combined weight of the packages sent to one city**
+
+Consider the database of a shipping company containing people and the packages they are sending to certain cities across the world, along with their weight. The database is a Dictionary with the key of String type (the names of the persons) and the values of Dictionary (String/Cities, Double/Weight) type.
+
+Please calculate the overall weight for one city destination. Once this is done, the user should be presented with an input dialog containing the distinct list of cities present in the input data dictionary. If the user chooses no value from the input dialog, print "Nothing chosen by the user"; otherwise you can print "The combined weight of the packages sent to <ChosenCity> is x.xx" (use double digits).
+
+**Note**: For input data, download the workflow below, which already has the Dictionary defined.
+
+New Dictionary(Of String, Dictionary(Of String, Double)) From {
+
+{"John C", New Dictionary(Of String, Double) From {{"Madrid",2.1},{"Paris",1.1}}  },
+
+{"Sarah C", New Dictionary(Of String, Double) From {{"New York",2.1},{"Paris",3.3},{"Berlin", 0.8}}  },
+
+{"Kyle R", New Dictionary(Of String, Double) From {{"San Francisco",2.8},{"New York",1.1}}  },
+
+{"Johnny B", New Dictionary(Of String, Double) From {{"New York",2.1},{"Paris",3.3}, {"Cairo",1.3}, {"Chicago",1.9}}  }}
+
 ### Details
 
 **Course:** UiPath - RPA Developer Foundation
