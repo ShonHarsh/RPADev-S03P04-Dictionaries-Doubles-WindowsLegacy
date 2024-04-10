@@ -1,12 +1,13 @@
 {
-  "name": "RPADev-S03P04-Dictionaries-Doubles",
+  "name": "RPADev-S03P04-Dictionaries-Doubles-WindowsLegacy",
+  "projectId": "b3d688ab-26d9-4508-8a5c-c0fd12a4e3c9",
   "description": "Calculate the combined weight of the packages sent to one city\r\n\r\nConsider the database of a shipping company containing people and the packages they are sending to certain cities across the world, along with their weight. The database is a Dictionary with the key of String type (the names of the persons) and the values of Dictionary (String/Cities, Double/Weight) type.\r\n\r\nPlease calculate the overall weight for one city destination. Once this is done, the user should be presented with an input ",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.10.4]",
-    "UiPath.Mail.Activities": "[1.10.5]",
-    "UiPath.System.Activities": "[21.4.1]",
-    "UiPath.UIAutomation.Activities": "[21.4.4]"
+    "UiPath.Excel.Activities": "[2.23.2-preview]",
+    "UiPath.Mail.Activities": "[1.22.2]",
+    "UiPath.System.Activities": "[24.3.0]",
+    "UiPath.UIAutomation.Activities": "[24.2.2-preview]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -15,16 +16,21 @@
   "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -37,7 +43,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": false
+    "modernBehavior": false,
+    "saveToCloud": false
   },
   "expressionLanguage": "CSharp",
   "entryPoints": [
