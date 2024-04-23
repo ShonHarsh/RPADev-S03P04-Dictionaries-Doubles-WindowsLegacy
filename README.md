@@ -34,7 +34,7 @@ New Dictionary(Of String, Dictionary(Of String, Double)) From {
 
 **Section:** 03 Data Manipulation
 
-**Practice:** 03 Dictionaries & Integers
+**Practice:** 04 Dictionaries & Doubles
 
 **Project Format:** Windows Legacy (Deprecated), C#
 
