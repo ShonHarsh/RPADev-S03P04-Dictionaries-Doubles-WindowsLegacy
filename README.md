@@ -42,7 +42,7 @@ New Dictionary(Of String, Dictionary(Of String, Double)) From {
 
 ### Sample Output
 
-```
+```sh
 07/22/2021 10:20:17 => [Debug] Execution started for project: RPADev-S03P04-Dictionaries-Doubles
 07/22/2021 10:20:18 => [Info] RPADev-S03P04-Dictionaries-Doubles execution started
 07/22/2021 10:20:27 => [Debug] The combined weight of the packages sent to Paris is 7.7.
@@ -59,11 +59,13 @@ A standard UiPath, Studio to Orchestrator cloud setup is the base of operation. 
 
 Clone the project to develop or change it.
 
-`git clone https://github.com/ShonHarsh/RPADev-S03P04-Dictionaries-Doubles-WindowsLegacy`
+```sh
+git clone https://github.com/ShonHarsh/RPADev-S03P04-Dictionaries-Doubles-WindowsLegacy
+```
 
 ### Links
 - [UiPath Automation Platform](https://www.uipath.com/)
-- [UiPath Studio](https://www.uipath.com/product/studio)
+- [UiPath Studio](https://www.uipath.com/product/studio)- [Atom Editor (Used for all my Readme files)](https://atom-editor.cc/)
 - [Shon Harsh Website 127.0.0.1](https://shonharsh.github.io/curriculum-vitae/index.html)
 - [This.GitHub](https://github.com/shonharsh)
 - [LinkedIn](https://www.linkedin.com/in/shonharsh/)
